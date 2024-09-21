@@ -316,6 +316,12 @@ html {
   background-position: center center;
 }
 
+@media only screen and (max-width: 768px) {
+    .services-thumbnail {
+        background-attachment: scroll;
+    }
+}
+
 .section-heading {
   position: relative;
   z-index: 1;
@@ -1289,6 +1295,12 @@ html {
   background-attachment: fixed;
   background-position: center;
 }
+
+@media only screen and (max-width: 768px) {
+    .news-overlay {
+        background-attachment: scroll;
+    }
+}
 .icon-img{
   max-width: 69%;
 }
@@ -1312,13 +1324,14 @@ html {
     }
 }
 @media only screen and (max-width: 500px) {
-  .event-mobile {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
+    .event-mobile {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 }
+
 .about-padding{
   padding-top: 4rem;
 }
