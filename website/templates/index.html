@@ -1,0 +1,2471 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <!--====== Required meta tags ======-->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--====== Title ======-->
+        <title>Greenway Apiaries</title>
+        <!--====== Favicon Icon ======-->
+        <link rel="shortcut icon" href="{% static 'website/images/faviconhoney.png' %}" type="image/png">
+        <!--====== FontAwesome css ======-->
+        <link rel="stylesheet" href="{% static 'website/fonts/fontawesome/css/all.min.css' %}">
+        <!--====== Flaticon css ======-->
+        <link rel="stylesheet" href="{% static 'website/fonts/flaticon/flaticon.css' %}">
+        <!--====== Bootstrap css ======-->
+        <link rel="stylesheet" href="{% static 'website/vendor/bootstrap/css/bootstrap.min.css' %}">
+        <!--====== magnific-popup css ======-->
+        <link rel="stylesheet" href="{% static 'website/vendor/magnific-popup/dist/magnific-popup.css' %}">
+        <!--====== Slick-popup css ======-->
+        <link rel="stylesheet" href="{% static 'website/vendor/slick/slick.css' %}">
+        <!--====== Nice Select css ======-->
+        <link rel="stylesheet" href="{% static 'website/vendor/nice-select/css/nice-select.css' %}">
+        <!--====== Animate css ======-->
+        <link rel="stylesheet" href="{% static 'website//vendor/animate.css' %}">
+        <!--====== Default css ======-->
+        <link rel="stylesheet" href="{% static 'website/css/default.css' %}">
+        <!--====== Style css ======-->
+        <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+        <!--====== themebundle css ======-->
+        <link rel="stylesheet" href="{% static 'website/css/theme.bundle.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.icons8.com/path-to-icons8-css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- Font Awesome  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!--GOOGLE FONTS-->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+      
+<style>
+@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: 'Rubik', sans-serif;
+  --font-serif: 'Cardo', serif;
+}
+
+.event-section-page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+
+@media (min-width: 600px) {
+  .event-section-page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  .event-section-page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.event-section-card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1), 
+              0 2px 2px rgba(0,0,0,0.1), 
+              0 4px 4px rgba(0,0,0,0.1), 
+              0 8px 8px rgba(0,0,0,0.1), 
+              0 16px 16px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 600px) {
+  .event-section-card {
+    height: 350px;
+  }
+}
+
+.event-section-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: center;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+
+/* First Card Image */
+.event-section-card:nth-child(1):before {
+    background-image: url("{% static 'website/images/image18.jpeg' %}");
+}
+
+/* Second Card Image */
+.event-section-card:nth-child(2):before {
+    background-image: url("{% static 'website/images/image4.jpeg' %}");
+}
+
+/* Third Card Image */
+.event-section-card:nth-child(3):before {
+  background-image: url('https://plus.unsplash.com/premium_photo-1661897204867-f926ca0f33bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGJlZWhpdmV8ZW58MHx8MHx8fDA%3D');
+}
+
+/* Fourth Card Image */
+.event-section-card:nth-child(4):before {
+    background-image: url("{% static 'website/images/image14.jpeg' %}");
+}
+
+.event-section-card:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.009) 11.7%,
+    rgba(0, 0, 0, 0.034) 22.1%,
+    rgba(0, 0, 0, 0.072) 31.2%,
+    rgba(0, 0, 0, 0.123) 39.4%,
+    rgba(0, 0, 0, 0.182) 46.6%,
+    rgba(0, 0, 0, 0.249) 53.1%,
+    rgba(0, 0, 0, 0.320) 58.9%,
+    rgba(0, 0, 0, 0.394) 64.3%,
+    rgba(0, 0, 0, 0.468) 69.3%,
+    rgba(0, 0, 0, 0.540) 74.1%,
+    rgba(0, 0, 0, 0.607) 78.8%,
+    rgba(0, 0, 0, 0.668) 83.6%,
+    rgba(0, 0, 0, 0.721) 88.7%,
+    rgba(0, 0, 0, 0.762) 94.1%,
+    rgba(0, 0, 0, 0.790) 100%
+  );
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+
+.event-section-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+
+.event-section-title {
+  font-size: 1.3rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #e3dbdb;
+}
+
+.event-section-copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: #e8e5e5;
+}
+
+.event-section-btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+.event-section-btn:hover {
+  background-color: lighten(black, 5%);
+}
+
+.event-section-btn:focus {
+  outline: 1px dashed yellow;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (min-width: 600px) {
+  .event-section-card:after {
+    transform: translateY(0);
+  }
+
+  .event-section-content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+
+  .event-section-card:hover,
+  .event-section-card:focus-within {
+    align-items: center;
+    &:before {
+      transform: translateY(-4%);
+    }
+    &:after {
+      transform: translateY(-50%);
+    }
+    .event-section-content {
+      transform: translateY(0);
+    }
+  }
+
+  .event-section-card:focus-within {
+    &:before,
+    &:after,
+    .event-section-content {
+      transition-duration: 0s;
+    }
+  }
+}
+
+.services-area {
+  position: relative;
+  z-index: 1;
+  background-color: #f0f0f0; /* Replace $bg-gray with its actual value */
+}
+
+.services-area .services-thumbnail {
+  flex: 0 0 40%;
+  max-width: 40%;
+  width: 40%;
+}
+
+@media (max-width: 576px) { /* XS breakpoint */
+  .services-area .services-thumbnail {
+    height: 300px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.services-area .services-content {
+  flex: 0 0 60%;
+  max-width: 60%;
+  width: 60%;
+  padding-right: 10% !important;
+}
+
+@media (max-width: 1200px) { /* LG breakpoint */
+  .services-area .services-content {
+    padding-right: 48px !important;
+  }
+}
+
+@media (max-width: 992px) { /* MD breakpoint */
+  .services-area .services-content {
+    padding-right: 48px !important;
+  }
+}
+
+@media (max-width: 576px) { /* XS breakpoint */
+  .services-area .services-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.single-service-area {
+  position: relative;
+  z-index: 1;
+}
+
+.single-service-area .service-title img {
+  margin-right: 15px;
+}
+
+.single-service-area .service-title h5 {
+  margin-bottom: 0;
+  transition: all 500ms; /* Replace @include transition-duration(500ms) */
+}
+
+.single-service-area:focus .service-title h5,
+.single-service-area:hover .service-title h5 {
+  color: #D9A05B; /* Replace $hover with its actual value */
+}
+.services-thumbnail {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.section-heading {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1rem;
+}
+
+.section-heading p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.section-heading h2 {
+  margin-bottom: 10px;
+  font-size: 36px;
+  margin-left: -3px;
+}
+
+@media (max-width: 1200px) { /* Replace this with your LG breakpoint value */
+  .section-heading h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 992px) { /* Replace this with your MD breakpoint value */
+  .section-heading h2 {
+    font-size: 30px;
+  }
+}
+
+.section-heading h2 span {
+  color: #D9A05B; /* Replace $primary with actual color */
+}
+
+@media (max-width: 576px) { /* Replace this with your XS breakpoint value */
+  .section-heading h2 {
+    font-size: 24px;
+  }
+}
+
+.section-heading.white h2,
+.section-heading.white p {
+  color: #ffffff; /* Replace $white with actual color */
+}
+
+.section-heading.white h2 span {
+  color: #ffffff; /* Replace $white with actual color */
+}
+.section-padding-100-50 {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.bg-img {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.jarallax {
+    position: relative;
+    z-index: 0;
+}
+/* Accordions */
+.single-accordion.panel {
+  background-color: #ffffff; /* Replace with $white */
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  border-bottom: 1px solid #cccccc; /* Replace with $border */
+}
+
+.single-accordion:last-of-type {
+  margin-bottom: 0;
+}
+
+.single-accordion h6 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.single-accordion h6 a {
+  background-color: transparent;
+  border-radius: 0;
+  color: #D9A05B; /* Replace with $hover */
+  display: block;
+  margin: 0;
+  padding: 20px 20px 20px 40px;
+  position: relative;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+@media (max-width: 576px) { /* Replace with actual $breakpoint-xs value */
+  .single-accordion h6 a {
+    font-size: 16px;
+  }
+}
+
+.single-accordion h6 a span {
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  top: 20px;
+}
+
+.single-accordion h6 a span.accor-open {
+  opacity: 0;
+}
+
+.single-accordion h6 a.collapsed {
+  color: #333333; /* Replace with $heading */
+}
+
+.single-accordion h6 a.collapsed span.accor-close {
+  opacity: 0;
+}
+
+.single-accordion h6 a.collapsed span.accor-open {
+  opacity: 1;
+}
+
+.single-accordion .accordion-content {
+  border-top: 0 solid transparent;
+  box-shadow: none;
+}
+
+.single-accordion .accordion-content p {
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+.modal {
+  --bs-modal-zindex: 1055;
+  --bs-modal-width: 500px;
+  --bs-modal-padding: 1rem;
+  --bs-modal-margin: 0.5rem;
+  --bs-modal-color: ;
+  --bs-modal-bg: var(--bs-body-bg);
+  --bs-modal-border-color: var(--bs-border-color-translucent);
+  --bs-modal-border-width: var(--bs-border-width);
+  --bs-modal-border-radius: var(--bs-border-radius-lg);
+  --bs-modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --bs-modal-inner-border-radius: calc(var(--bs-border-radius-lg) - (var(--bs-border-width)));
+  --bs-modal-header-padding-x: 1rem;
+  --bs-modal-header-padding-y: 1rem;
+  --bs-modal-header-padding: 1rem 1rem;
+  --bs-modal-header-border-color: var(--bs-border-color);
+  --bs-modal-header-border-width: var(--bs-border-width);
+  --bs-modal-title-line-height: 1.5;
+  --bs-modal-footer-gap: 0.5rem;
+  --bs-modal-footer-bg: ;
+  --bs-modal-footer-border-color: var(--bs-border-color);
+  --bs-modal-footer-border-width: var(--bs-border-width);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--bs-modal-zindex);
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: var(--bs-modal-margin);
+  pointer-events: none;
+}
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .modal.fade .modal-dialog {
+    transition: none;
+  }
+}
+.modal.show .modal-dialog {
+  transform: none;
+}
+.modal.modal-static .modal-dialog {
+  transform: scale(1.02);
+}
+
+.modal-dialog-scrollable {
+  height: calc(100% - var(--bs-modal-margin) * 2);
+}
+.modal-dialog-scrollable .modal-content {
+  max-height: 100%;
+  overflow: hidden;
+}
+.modal-dialog-scrollable .modal-body {
+  overflow-y: auto;
+}
+
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - var(--bs-modal-margin) * 2);
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--bs-modal-color);
+  pointer-events: auto;
+  background-clip: padding-box;
+  border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+  border-radius: var(--bs-modal-border-radius);
+  outline: 0;
+  color: #0f0f0f;
+  border-radius: 26px;
+  background-color: #c6c6c6;
+}
+
+.modal-backdrop {
+  --bs-backdrop-zindex: 1050;
+  --bs-backdrop-bg: #000;
+  --bs-backdrop-opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--bs-backdrop-zindex);
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bs-backdrop-bg);
+}
+.modal-backdrop.fade {
+  opacity: 0;
+}
+.modal-backdrop.show {
+  opacity: var(--bs-backdrop-opacity);
+}
+
+.modal-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--bs-modal-header-padding);
+  border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+  border-top-left-radius: var(--bs-modal-inner-border-radius);
+  border-top-right-radius: var(--bs-modal-inner-border-radius);
+}
+.modal-header .btn-close {
+  padding: calc(var(--bs-modal-header-padding-y) * 0.5) calc(var(--bs-modal-header-padding-x) * 0.5);
+  margin: calc(-0.5 * var(--bs-modal-header-padding-y)) calc(-0.5 * var(--bs-modal-header-padding-x)) calc(-0.5 * var(--bs-modal-header-padding-y)) auto;
+}
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: var(--bs-modal-title-line-height);
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: var(--bs-modal-padding);
+}
+
+.modal-footer {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap) * 0.5);
+  background-color: var(--bs-modal-footer-bg);
+  border-top: var(--bs-modal-footer-border-width) solid var(--bs-modal-footer-border-color);
+  border-bottom-right-radius: var(--bs-modal-inner-border-radius);
+  border-bottom-left-radius: var(--bs-modal-inner-border-radius);
+}
+.modal-footer > * {
+  margin: calc(var(--bs-modal-footer-gap) * 0.5);
+}
+
+@media (min-width: 576px) {
+  .modal {
+    --bs-modal-margin: 1.75rem;
+    --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  .modal-dialog {
+    max-width: var(--bs-modal-width);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .modal-sm {
+    --bs-modal-width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg,
+  .modal-xl {
+    --bs-modal-width: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal-xl {
+    --bs-modal-width: 1140px;
+  }
+}
+.modal-fullscreen {
+  width: 100vw;
+  max-width: none;
+  height: 100%;
+  margin: 0;
+}
+.modal-fullscreen .modal-content {
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+}
+.modal-fullscreen .modal-header,
+.modal-fullscreen .modal-footer {
+  border-radius: 0;
+}
+.modal-fullscreen .modal-body {
+  overflow-y: auto;
+}
+
+@media (max-width: 575.98px) {
+  .modal-fullscreen-sm-down {
+    width: 100vw;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+  }
+  .modal-fullscreen-sm-down .modal-content {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+  }
+  .modal-fullscreen-sm-down .modal-header,
+  .modal-fullscreen-sm-down .modal-footer {
+    border-radius: 0;
+  }
+  .modal-fullscreen-sm-down .modal-body {
+    overflow-y: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .modal-fullscreen-md-down {
+    width: 100vw;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+  }
+  .modal-fullscreen-md-down .modal-content {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+  }
+  .modal-fullscreen-md-down .modal-header,
+  .modal-fullscreen-md-down .modal-footer {
+    border-radius: 0;
+  }
+  .modal-fullscreen-md-down .modal-body {
+    overflow-y: auto;
+  }
+}
+@media (max-width: 991.98px) {
+  .modal-fullscreen-lg-down {
+    width: 100vw;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+  }
+  .modal-fullscreen-lg-down .modal-content {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+  }
+  .modal-fullscreen-lg-down .modal-header,
+  .modal-fullscreen-lg-down .modal-footer {
+    border-radius: 0;
+  }
+  .modal-fullscreen-lg-down .modal-body {
+    overflow-y: auto;
+  }
+}
+@media (max-width: 1199.98px) {
+  .modal-fullscreen-xl-down {
+    width: 100vw;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+  }
+  .modal-fullscreen-xl-down .modal-content {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+  }
+  .modal-fullscreen-xl-down .modal-header,
+  .modal-fullscreen-xl-down .modal-footer {
+    border-radius: 0;
+  }
+  .modal-fullscreen-xl-down .modal-body {
+    overflow-y: auto;
+  }
+}
+@media (max-width: 1399.98px) {
+  .modal-fullscreen-xxl-down {
+    width: 100vw;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+  }
+  .modal-fullscreen-xxl-down .modal-content {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+  }
+  .modal-fullscreen-xxl-down .modal-header,
+  .modal-fullscreen-xxl-down .modal-footer {
+    border-radius: 0;
+  }
+  .modal-fullscreen-xxl-down .modal-body {
+    overflow-y: auto;
+  }
+}
+/* Justify Border Title
+-----------------------------------------------------------------*/
+.fancy-title {
+  --cnvs-fancy-title-bg: #fff;
+  --cnvs-fancy-title-padding: 0.75rem;
+  --cnvs-fancy-title-border-size: 1px;
+  --cnvs-fancy-title-border-color: rgba(var(--cnvs-contrast-rgb), 0.1);
+  --cnvs-fancy-title-dotted-border: images/icons/dotted.png;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.fancy-title h1, .fancy-title .h1,
+.fancy-title h2,
+.fancy-title .h2,
+.fancy-title h3,
+.fancy-title .h3,
+.fancy-title h4,
+.fancy-title .h4,
+.fancy-title h5,
+.fancy-title .h5,
+.fancy-title h6,
+.fancy-title .h6 {
+  position: relative;
+  margin-bottom: 0;
+}
+.fancy-title::before, .fancy-title::after {
+  content: "";
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 0;
+  border-top: calc(var(--cnvs-fancy-title-border-size) * 3) double rgba(var(--cnvs-contrast-rgb), 0.1);
+}
+.fancy-title::before {
+  display: none;
+  margin-right: var(--cnvs-fancy-title-padding);
+}
+.fancy-title::after {
+  margin-left: var(--cnvs-fancy-title-padding);
+}
+
+.title-border::before,
+.title-border::after {
+  border-top-width: var(--cnvs-fancy-title-border-size);
+  border-top-style: solid;
+}
+
+.title-border-color::before,
+.title-border-color::after {
+  border-top: var(--cnvs-fancy-title-border-size) solid var(--cnvs-themecolor);
+}
+
+/* Fancy Title - Center Align
+-----------------------------------------------------------------*/
+.title-center::before {
+  display: block;
+}
+
+/* Fancy Title - Right Align
+-----------------------------------------------------------------*/
+.title-right::before {
+  display: block;
+}
+.title-right::after {
+  display: none;
+}
+
+/* Fancy Title - Bottom Short Border
+-----------------------------------------------------------------*/
+.title-bottom-border::before, .title-bottom-border::after {
+  display: none;
+}
+.title-bottom-border h1, .title-bottom-border .h1,
+.title-bottom-border h2,
+.title-bottom-border .h2,
+.title-bottom-border h3,
+.title-bottom-border .h3,
+.title-bottom-border h4,
+.title-bottom-border .h4,
+.title-bottom-border h5,
+.title-bottom-border .h5,
+.title-bottom-border h6,
+.title-bottom-border .h6 {
+  width: 100%;
+  padding: 0 0 var(--cnvs-fancy-title-padding);
+  border-bottom: calc(var(--cnvs-fancy-title-border-size) * 2) solid var(--cnvs-themecolor);
+}
+.honey-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+}
+
+.honey-card-body {
+    padding: 15px;
+}
+
+.honey-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.honey-card-text {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.honey-text-muted {
+    color: #6c757d; /* Bootstrap's muted text color */
+}
+
+.carousel-item {
+    padding: 20px;
+    transition: transform 0.6s ease; /* Smoother transition */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+    border-radius: 50%;
+}
+.newsletter-area form {
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter-area form .form-control {
+  background-color: white;
+}
+
+.newsletter-area form button.famie-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 170px;
+  height: 48px;
+  background-color: green;
+  cursor: pointer;
+}
+
+.newsletter-area form button.famie-btn:hover {
+  background-color: #333; /* Replace $dark with the correct color value */
+}
+
+@media (max-width: 576px) { /* Replace with the appropriate breakpoint value */
+  .newsletter-area form button.famie-btn {
+    width: 130px;
+  }
+}
+.form-control {
+  position: relative;
+  z-index: 2;
+  height: 48px;
+  width: 100%;
+  background-color: white; /* Replace $white with actual value */
+  font-size: 12px;
+  margin-bottom: 30px;
+  padding: 10px 30px;
+  color: #000; /* Replace $text with actual value */
+  transition-duration: 500ms; /* Replace @include with direct CSS */
+  border: 1px solid #ccc; /* Replace $border with actual value */
+  border-radius: 2px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  background-color: white; /* Replace $white with actual value */
+  border-color: #D9A05B; /* Replace $hover with actual value */
+}
+
+@media (max-width: 576px) { /* Replace with appropriate breakpoint */
+  .form-control {
+    padding: 10px 15px;
+  }
+}
+.section-padding-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.bg-overlay::after {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+.famie-btn {
+  background-color: #ffbc1f;
+  -webkit-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  min-width: 160px;
+  height: 50px;
+ 
+  border-radius: 0;
+  padding: 0 30px;
+  font-size: 16px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #2d2a2a;
+}
+.about-us-img {
+  /* Default for screens larger than 992px */
+  margin-bottom: 100px;
+}
+
+@media (max-width: 992px) {
+  /* For screens smaller than or equal to 992px */
+  .about-us-img {
+    margin-bottom: 2rem;
+  }
+}
+/* Accordions */
+.single-accordion.panel {
+  background-color: white; /* Replace $white with actual value */
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  border-bottom: 1px solid #ccc; /* Replace $border with actual value */
+}
+
+.single-accordion:last-of-type {
+  margin-bottom: 0;
+}
+
+.single-accordion h6 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.single-accordion h6 a {
+  background-color: transparent;
+  border-radius: 0;
+  color: #D9A05B; /* Replace $hover with actual value */
+  display: block;
+  margin: 0;
+  padding: 20px 20px 20px 40px;
+  position: relative;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+@media (max-width: 576px) { /* Replace with appropriate breakpoint value */
+  .single-accordion h6 a {
+    font-size: 16px;
+  }
+}
+
+.single-accordion h6 a span {
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  top: 20px;
+}
+
+.single-accordion h6 a span.accor-open {
+  opacity: 0;
+}
+
+.single-accordion h6 a.collapsed {
+  color: #333; /* Replace $heading with actual value */
+}
+
+.single-accordion .accordion-content p {
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  font-family: "Karla", sans-serif;
+  color: #707070;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+/* Core styles for event cards */
+.entry.event {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 5px;
+  
+  height: 100%;
+}
+
+.entry.event:hover {
+  transform: translateY(-5px);
+}
+
+/* Inner grid styling */
+.grid-inner {
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+/* Styling for event images */
+.entry-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.entry-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.entry-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Badge on image */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  color: #000;
+  font-weight: 500;
+}
+
+/* Meta data and titles */
+.entry-meta {
+  font-size: 14px;
+  color: #666;
+}
+
+.entry-meta a {
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none; /* Remove underline */
+}
+
+.entry-meta a:hover {
+  color: #28a745; /* Change this to the color you prefer */
+}
+
+.entry-title h3 a {
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  text-decoration: none; /* Remove underline */
+}
+
+.entry-title h3 a:hover {
+  color: #28a745; /* Change this to the hover color you prefer */
+}
+
+/* Event description */
+.entry-content p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.entry-meta .uil-map-marker {
+  margin-right: 5px;
+}
+
+.entry-meta ul li a {
+  color: #666;
+  text-decoration: none; /* Remove underline */
+}
+
+.entry-meta ul li a:hover {
+  color: #28a745; /* Location hover color */
+}
+.entry-meta ul {
+  list-style: none; /* Remove the bullets */
+  padding-left: 0; /* Ensure no left padding */
+}
+
+.brand-slider-outer {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 7rem;
+  margin-top: 2rem;
+}
+
+.brand-slider-row {
+  --duration: 14s; /* Set your desired duration */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  width: max-content; /* This ensures the content width isn't restricted by the viewport */
+  animation: marquee var(--duration) linear infinite;
+}
+
+/* Duplicate the content for smooth looping */
+.brand-slider-row::after {
+  content: "";
+  display: block;
+  width: 100%; /* Makes sure we duplicate the content */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0); /* Starts from the left without a gap */
+  }
+  100% {
+    transform: translateX(-50%); /* Moves the content to the left (adjusted for no gap) */
+  }
+}
+
+.brand-slider-row .brand-slider-first {
+  align-items: center;
+  display: flex;
+  white-space: nowrap;
+}
+
+.brand-slider-row .brand-slider-first .brand-title {
+  align-items: center;
+  color: #555;
+  display: flex;
+  font-family: "freight-display-pro", serif;
+  font-size: 100px;
+  line-height: 1.2;
+  padding: 0 1vw 0 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 1167px) {
+  .brand-slider-row .brand-slider-first .brand-title {
+    font-size: 100px;
+  }
+}
+.highlight-muted {
+  color: #F7E6C4; /* Muted golden yellow for "Naturally" and "Carefully" */
+}
+
+.highlight-strong {
+  color: #D9A05B; /* Strong honey/orange color for "Sweet" and "Crafted" */
+  font-weight: bold;
+}
+.contact-maps {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 480px;
+}
+
+@media (max-width: 576px) {
+  .contact-maps {
+    height: 260px;
+  }
+}
+
+.contact-maps iframe {
+  width: 100%;
+  height: 100%;
+  border: none !important;
+}
+.famie-faq-area {
+  margin-top: 4rem;
+}
+.accordion-margin {
+  margin-bottom: 4rem;
+}
+.content-wrap-mg {
+  padding-top: 3rem;
+}
+.contact-margin{
+  margin-top: 6rem;
+}
+.wow {
+  animation-duration: 1.5s;
+}
+.section-title .sub-title:before {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      background-image: url("{% static 'website/images/icon/HONEYICON.png' %}");
+      background-size: cover;
+      vertical-align: middle;
+      margin-right: 10px;
+      content: '';
+  }
+  .flaticon-tractor:before {
+    content: '';
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-image: url("{% static 'website/images/icon/HONEYJAR.png' %}");
+    background-size: cover;
+    vertical-align: middle;
+    
+}
+.flaticon-agriculture:before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url("/static/website/images/icon/HONEYCOMBICON.PNG");
+    background-size: cover;
+    vertical-align: middle;
+}
+
+.newsletter-center {
+  justify-content: center;
+  text-align: center;
+}
+.honey-cursive {
+  font-family: 'Dancing Script', cursive;
+  font-size: 100px;
+  color:white;
+}
+.check-brwn{
+  color: #d9a05b;
+}
+@media (max-width: 992px) {
+  .brand-logo {
+    width: 120px;
+  }
+}
+.news-overlay {
+  background-image: url("{% static 'website/images/newsoverlay.jpg' %}");
+}
+.icon-img{
+  max-width: 69%;
+}
+.heroimg{
+  background-image: url("{% static 'website/images/heroimg.jpg' %}");
+}
+
+@media (min-width: 992px) {
+    .about-us-content {
+        margin-bottom: 7rem;
+    }
+}
+@media (min-width: 992px) {
+    .famie-faq-area {
+        margin-top: -7rem;
+    }
+}
+@media (max-width: 991px) {
+    .famie-faq-area {
+        margin-top: -3rem;
+    }
+}
+
+</style>
+    </head>
+    <body>
+        <!--====== Start Preloader ======-->
+        <div class="preloader">
+            <div class="loader">
+                <div class="pre-shadow"></div>
+                <div class="pre-box"></div>
+            </div>
+        </div>
+        <!--====== End Preloader ======-->
+        <!--====== Start Header Section ======-->
+        <header class="header-area">
+      
+            <div class="header-middle">
+                <div class="container-1350">
+                    <div class="row align-items-center">
+                        <div class="col-xl-4 d-xl-block d-lg-none">
+                            <div class="site-branding d-lg-block d-none">
+                                <a href="index.html" class="brand-logo"><img src="{% static 'website/images/logo/image20.png' %}" alt="Site Logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-12">
+                            <div class="contact-information">
+                                <div class="information-item_one d-flex">
+                                   
+                                    
+                                </div>
+                                <div class="information-item_one d-flex">
+                                    <div class="icon">
+                                        <i class="flaticon-email"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h5 class="mb-1">Email Us</h5>
+                                        <p><a href="mailto:hotlineinfo@gmial.com">hotlineinfo@gmial.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="button text-md-right text-sm-center">
+                                    <a href="contact.html" class="main-btn btn-yellow">About us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-navigation navigation-one">
+                <div class="nav-overlay"></div>
+                <div class="container-1350">
+                    <div class="primary-menu">
+                        <div class="site-branding">
+                            <a href="index.html" class="brand-logo"><img src="{% static 'website/images/logo/image20.png' %}" alt="Site Logo"></a>
+                        </div>
+                        <div class="nav-inner-menu">
+                            <div class="nav-menu">
+                                <!--=== Mobile Logo ===-->
+                                <div class="mobile-logo mb-30 d-block d-xl-none text-center">
+                                    <a href="index.html" class="brand-logo"><img src="{% static 'website/images/logo/image20.png' %}" alt="Site Logo"></a>
+                                </div>
+                              <!--=== Main Menu ===-->
+<nav class="main-menu">
+  <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li> <!-- Direct link to the gallery page -->
+      <li><a href="#products">Products</a></li> <!-- Direct link to products -->
+      <li><a href="#events">Events</a></li> <!-- Direct link to events -->
+      <li><a href="#contact">Contact</a></li> <!-- Direct link to contact -->
+  </ul>
+</nav>
+
+                            </div>
+                            <!--=== Nav Right Item ===-->
+                            <div class="nav-right-item">
+                                <div class="navbar-toggler">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--====== End Header Section ======-->
+  <!--====== Start Hero Section ======-->
+<section id ="home" class="hero-area-one">
+  <div class="hero-slider-one">
+      <div class="single-slider">
+          <div class="image-layer bg_cover heroimg" ></div>
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-10">
+                      <div class="hero-content text-center wow fadeInUp">
+                          <h1 data-animation="fadeInUp" data-delay=".5s">Welcome To Greenway Apiaries </h1>
+                          <div class="hero-button wow fadeInDown" data-animation="fadeInDown" data-delay=".6s">
+                              <a href="about.html" class="main-btn btn-yellow">About Us</a>
+                              
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="single-slider">
+          <div class="image-layer bg_cover heroimg"></div>
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-10">
+                      <div class="hero-content text-center wow fadeInUp">
+                          <h1 data-animation="fadeInUp" data-delay=".5s">Join Our Newsletter</h1>
+                          <div class="hero-button wow fadeInDown" data-animation="fadeInDown" data-delay=".6s">
+                              <a href="#newsletter" class="main-btn btn-yellow">Subscribe Now</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--====== End Hero Section ======-->
+
+<!--====== Start Features Section ======-->
+<section class="features-section">
+  <div class="container-1350">
+      <div class="features-wrap-one wow fadeInUp">
+          <div class="row justify-content-center">
+              <div class="col-xl-4 col-md-6 col-sm-12">
+                  <div class="features-item d-flex mb-30 wow fadeInUp">
+                      <div class="fill-number">01</div>
+                      <div class="icon">
+                          <i class="flaticon-tractor"></i>
+                      </div>
+                      <div class="text">
+                          <h5>Pennsylvania Local Bees</h5>
+                          <p>We breed bees that are resistant to varroa mites and local to Pennsylvania.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-6 col-sm-12">
+                  <div class="features-item d-flex mb-30 wow fadeInUp" data-wow-delay="0.3s">
+                      <div class="fill-number">02</div>
+                      <div class="icon">
+                          <i class="flaticon-agriculture"></i>
+                      </div>
+                      <div class="text">
+                          <h5>Farm-to-Table Honey</h5>
+                          <p>Our honey is harvested from our own hives and delivered directly to you.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-6 col-sm-12">
+                  <div class="features-item d-flex mb-30 wow fadeInUp" data-wow-delay="0.5s">
+                      <div class="fill-number">03</div>
+                      <div class="icon">
+                          <i class="flaticon-social-care"></i>
+                      </div>
+                      <div class="text">
+                          <h5>Highly Respected Research</h5>
+                          <p>Our bees are studied by both PennState and Purdue University for their genetics.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--====== End Features Section ======-->
+
+<!--====== Start About Section ======-->
+<section id ="about"class="about-section p-r z-1" style = "padding-top: 4REM;">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-xl-5 col-lg-6">
+              <div class="about-one_content-box mb-50 wow fadeInUp">
+                  <div class="section-title section-title-left mb-30 wow fadeInUp">
+                      <span class="sub-title">About Us</span>
+                      <h2>GreenWay Apiaries</h2>
+                  </div>
+                  <div class="quote-text mb-35 wow fadeInDown" data-wow-delay=".3s">
+                      <p>Small commercial apiary and honey farm in Eastern and Northern Pennsylvania, providing farm-to-table honey and bee products.</p>
+                  </div>
+                  <div class="tab-content-box wow fadeInUp">
+                      <ul class="nav nav-tabs mb-20">
+                          <li class="nav-item">
+                              <a class="nav-link active" data-toggle="tab" href="#mission">Our Mission</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#vision">Our Vision</a>
+                          </li>
+                      </ul>
+                      <div class="tab-content" style ="padding-top: 1rem;">
+                          <div class="tab-pane fade show active wow fadeInUp" id="mission">
+                              <div class="content-box-gap">
+                                  <p>Our mission is to provide pure, local honey and bee products to our community, while working on breeding Pennsylvania bees with reliable resistance to varroa mites.</p>
+                              </div>
+                          </div>
+                          <div class="tab-pane fade" id="vision">
+                              <div class="content-box-gap">
+                                  <p>Our vision is to localize a strain of Pennsylvania bees that can help combat the varroa mite problem and support sustainable beekeeping practices.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xl-7 col-lg-6 wow fadeInRight">
+              <div class="about-one_image-box p-r mb-50 pl-100">
+                  <div class="about-img_one wow fadeInLeft">
+                      <img src="{% static 'website/images/devon1.jpeg' %}" alt="About Image">
+                  </div>
+                  <div class="about-img_two wow fadeInRight">
+                      <img src="{% static 'website/images/about/greenwayhero.jpg' %}" alt="About Image">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--====== End About Section ======-->
+
+<!-- SLIDING WORDS (kept as is, no fade animation added) -->
+<div class="brand-slider-outer is-inview" data-scroll="">
+  <div class="brand-slider-row flex">
+    <div class="brand-slider-first flex">
+      <div class="brand-title flex">
+        <span class ="highlight-muted">Naturally&nbsp;</span><span class = "highlight-strong"> Sweet.&nbsp;</span><span class = "highlight-muted">Carefully&nbsp;</span><span class = "highlight-strong">Crafted.&nbsp;</span>
+      </div>
+    </div>
+    <div class="brand-slider-first flex">
+      <div class="brand-title flex">
+        <span class ="highlight-muted">Naturally&nbsp;</span><span class="highlight-strong"> Sweet.&nbsp;</span><span class="highlight-muted">Carefully&nbsp;</span><span class="highlight-strong">Crafted.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ##### Coming Soon ##### -->
+<section class="about-us-area">
+  <div class="container wow fadeInUp">
+    <div class="row align-items-center">
+      <!-- About Us Content -->
+      <div class="col-12 col-lg-6">
+        <div class="about-us-content mb-100 wow fadeInLeft">
+          <!-- Section Heading -->
+          <div class="section-heading">
+            <p>COMING SOON</p>
+            <h2><span>Online Store</span> Launching Soon</h2>
+          </div>
+          <p>We’re excited to announce that our online store will be launching soon! You'll be able to purchase our local, farm-to-table honey products and have them shipped straight to your home. Products will include:</p>
+          <ul>
+            <li><i class="fas fa-check-circle check-brwn"></i> Light spring honey</li>
+            <li><i class="fas fa-check-circle check-brwn" ></i> Dark amber autumn honey</li>
+            <li><i class="fas fa-check-circle check-brwn" ></i> 100% beeswax candles</li>
+            <li><i class="fas fa-check-circle check-brwn" ></i> Propolis tincture</li>
+            <li><i class="fas fa-check-circle check-brwn" ></i> Hand and skin cream</li>
+            <li><i class="fas fa-check-circle check-brwn" ></i> Comb honey (coming in 2025)</li>
+          </ul>
+          <p>Click the button below to stay updated and be the first to know when our store goes live!</p>
+          <a href="#" class="btn famie-btn btn-margin">Get Notified</a>
+        </div>
+      </div>
+      <!-- Famie Video Play -->
+      <div class="col-12 col-lg-6 wow fadeInRight">
+        <div class="about-us-thumbnail mb-100">
+          <img src="https://plus.unsplash.com/premium_photo-1661776579515-d116e1ffdd3d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ##### Coming Soon END ##### -->
+
+
+
+
+
+<!--====== Newsletter CTAs ======-->
+<div class="event-lg collapse show bg-cover wow fadeInUp news-overlay" id="eventOne">
+  <div class="bg-black bg-opacity-50">
+    <div class="container">
+      <div class="row py-10 center-cta newsletter-center">
+        <div class="col-md-8 col-lg-5 wow fadeInLeft">
+          <!-- Heading -->
+          <h2 class="mb-3 text-white">Join Our Newsletter!</h2>
+
+          <!-- Description -->
+          <p class="mb-6 text-white text-opacity-75">
+            Sign up for our newsletter to stay updated on our latest bee research, honey production, and product launches. 
+            As an avid beekeeper, Devon has even been published in national bee magazines, so you can expect informative insights and updates.
+          </p>
+
+          <!-- Button -->
+          <a href="about.html" class="main-btn btn-yellow wow fadeInUp">Subscribe Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--====== Newsletter CTAs END ======-->
+
+<!--====== Gallery ======-->
+<section id="gallery" class="projects-section pt-130 pb-95 p-r z-1 wow fadeInUp">
+  <div class="container">
+    <div class="row align-items-end">
+      <div class="col-lg-8 col-md-9 wow fadeInLeft">
+        <div class="section-title section-title-left mb-60">
+          <span class="sub-title">Business Gallery</span>
+          <h2>A Glimpse into GreenWay Apiaries</h2>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-3 wow fadeInRight">
+        <div class="project-arrows mb-60 float-md-right"></div>
+      </div>
+    </div>
+    <div class="projects-slider-one wow fadeInUp">
+      <div class="project-item wow fadeInUp">
+        <div class="img-holder">
+          <img src="{% static 'website/images/devon.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <!--<h3 class="title"><a href="portfolio-details.html">Bee Farm Operations</a></h3>-->
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery1.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery2.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery3.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery4.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery5.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery6.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery7.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery8.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery9.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery10.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery11.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery12.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery13.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery14.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery15.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery16.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery17.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery18.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery19.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-item wow fadeInDown">
+        <div class="img-holder">
+          <img src="{% static 'website/images/gallery20.jpeg' %}" alt="Gallery Image">
+          <div class="hover-portfolio">
+            <div class="hover-content">
+              <p><a href="#">Greenway</a> <a href="#">Apiaries</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</section>
+<!--====== End Gallery Section ======-->
+
+<!-- ##### PRODUCTS Start ##### -->
+<section id="products"class="services-area d-flex flex-wrap wow fadeInUp">
+  <!-- Service Thumbnail -->
+  <div class="services-thumbnail bg-img jarallax" style=" background-position-x: -500px; background-image: url({% static 'website/images/service/gettykeeper.jpg' %});"></div>
+
+  <!-- Service Content -->
+  <div class="services-content section-padding-100-50 px-5">
+    <div class="container-fluid">
+      <div class="row wow fadeInUp">
+        <div class="col-12">
+          <!-- Section Heading -->
+          <div class="section-heading wow fadeInUp">
+            <p>What we do</p>
+            <h2><span>Our Products</span> Are Farm-Fresh and Pure</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mb-50 wow fadeInUp">
+          <p>At GreenWay Apiaries, we offer a variety of honey and bee-related products that are harvested directly from our own hives, ensuring quality and purity in everything we produce.</p>
+        </div>
+
+        <!-- Single Product Area -->
+        <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+          <div class="single-service-area mb-50">
+            <!-- Service Title -->
+            <div class="service-title mb-3 d-flex align-items-center">
+              <img src="img/core-img/s1.png" alt="">
+              <h5>Spring Honey</h5>
+            </div>
+            <p>Our light and delicate spring honey is harvested in July and is perfect for a mild, floral flavor.</p>
+          </div>
+        </div>
+
+        <!-- Single Product Area -->
+        <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="300ms">
+          <div class="single-service-area mb-50">
+            <!-- Service Title -->
+            <div class="service-title mb-3 d-flex align-items-center">
+              <img src="img/core-img/s2.png" alt="">
+              <h5>Autumn Honey</h5>
+            </div>
+            <p>This darker, more robust honey is harvested in late summer or early autumn, ideal for those who love a stronger honey flavor.</p>
+          </div>
+        </div>
+
+        <!-- Single Product Area -->
+        <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="500ms">
+          <div class="single-service-area mb-50">
+            <!-- Service Title -->
+            <div class="service-title mb-3 d-flex align-items-center">
+              <img src="img/core-img/s3.png" alt="">
+              <h5>100% Beeswax Candles</h5>
+            </div>
+            <p>Our pure beeswax candles are made from our hives, offering a natural and long-lasting burn.</p>
+          </div>
+        </div>
+
+        <!-- Single Product Area -->
+        <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="700ms">
+          <div class="single-service-area mb-50">
+            <!-- Service Title -->
+            <div class="service-title mb-3 d-flex align-items-center">
+              <img src="img/core-img/s4.png" alt="">
+              <h5>Propolis Tincture</h5>
+            </div>
+            <p>Our propolis tincture is made from the resinous material collected by bees, known for its potential health benefits.</p>
+          </div>
+        </div>
+
+        <!-- Single Product Area -->
+        <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="900ms">
+          <div class="single-service-area mb-50">
+            <!-- Service Title -->
+            <div class="service-title mb-3 d-flex align-items-center">
+              <img src="img/core-img/s5.png" alt="">
+              <h5>Hand and Skin Cream</h5>
+            </div>
+            <p>Our all-natural hand and skin cream is made from beeswax and other nourishing ingredients to keep your skin soft and hydrated.</p>
+          </div>
+        </div>
+
+        <!-- Single Product Area -->
+        <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="1100ms">
+          <div class="single-service-area mb-50">
+            <!-- Service Title -->
+            <div class="service-title mb-3 d-flex align-items-center">
+              <img src="img/core-img/s6.png" alt="">
+              <h5>Comb Honey (Coming 2025)</h5>
+            </div>
+            <p>Our comb honey, launching in 2025, is harvested directly from the hive and provides an entirely raw, natural honey experience.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ##### PRODUCTS End ##### -->
+
+
+        
+        <!--====== LOCATION Section ======-->
+<section class="popular-service p-r z-1 pt-130">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-xl-8 col-lg-10">
+              <div class="section-title text-center mb-50 wow fadeInDown">
+                  <h2>All of Our Retail Locations</h2>
+              </div>
+          </div>
+      </div>
+      <div class="row align-items-center">
+          <div class="col-lg-4">
+              <div class="single-service-item mb-50 wow fadeInUp">
+                  <div class="icon">
+                      <img class="icon-img"src="https://img.icons8.com/?size=100&id=1M0WNfyF7SI6&format=png&color=000000" alt="Icon">
+                  </div>
+                  <div class="text">
+                      <h3><a href="service-details.html">Jim Thorpe, PA</a></h3>
+                      <p>81 Broadway, Jim Thorpe, PA 18229</p>
+                  </div>
+              </div>
+              <div class="single-service-item mb-50 wow fadeInDown">
+                  <div class="icon">
+                      <img class="icon-img" src="https://img.icons8.com/?size=100&id=3MtamNHEJ78V&format=png&color=000000" alt="Icon">
+                  </div>
+                  <div class="text">
+                      <h3><a href="service-details.html">Scranton, PA</a></h3>
+                      <p>123 Main St, Scranton, PA 18503</p>
+                  </div>
+              </div>
+              <div class="single-service-item mb-50 wow fadeInUp">
+                  <div class="icon">
+                      <img class="icon-img" src="https://img.icons8.com/?size=100&id=rje7re8ItHNW&format=png&color=000000" alt="Icon">
+                  </div>
+                  <div class="text">
+                      <h3><a href="service-details.html">Allentown, PA</a></h3>
+                      <p>456 Maple Ave, Allentown, PA 18102</p>
+                  </div>
+              </div>
+              <div class="single-service-item mb-50 wow fadeInUp">
+                  <div class="icon">
+                      <img class="icon-img" src="https://img.icons8.com/?size=100&id=yRNeE4rWE2B4&format=png&color=000000" alt="Icon">
+                  </div>
+                  <div class="text">
+                      <h3><a href="service-details.html">Allentown, PA</a></h3>
+                      <p>456 Maple Ave, Allentown, PA 18102</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4">
+              <div class="img-holder mb-50 wow fadeInDown">
+                  <img src="{% static 'website/images/gallery13.jpeg' %}" alt="Service Image">
+              </div>
+          </div>
+          <div class="col-lg-4">
+              <div class="single-service-item mb-50 card-rtl wow fadeInDown">
+                  <div class="icon">
+                      <img class="icon-img" src="https://img.icons8.com/?size=100&id=C2pzzuvgRFA0&format=png&color=000000" alt="Icon">
+                  </div>
+                  <div class="text">
+                      <h3><a href="service-details.html">Philadelphia, PA</a></h3>
+                      <p>789 Walnut St, Philadelphia, PA 19107</p>
+                  </div>
+              </div>
+              <div class="single-service-item mb-50 card-rtl wow fadeInUp">
+                  <div class="icon">
+                      <img class="icon-img" src="https://img.icons8.com/?size=100&id=NHZvPIUC5CyM&format=png&color=000000" alt="Icon">
+                  </div>
+                  <div class="text">
+                      <h3><a href="service-details.html">Harrisburg, PA</a></h3>
+                      <p>101 Pine St, Harrisburg, PA 17101</p>
+                  </div>
+              </div>
+              <div class="single-service-item mb-50 card-rtl wow fadeInDown">
+                  <div class="icon">
+                      <img class="icon-img" src="https://img.icons8.com/?size=100&id=cHXdrig6UnM4&format=png&color=000000" alt="Icon">
+                  </div>
+                  <div class="text">
+                      <h3><a href="service-details.html">Pittsburgh, PA</a></h3>
+                      <p>102 River Blvd, Pittsburgh, PA 15212</p>
+                  </div>
+              </div>
+              <div class="single-service-item mb-50 card-rtl wow fadeInDown">
+                  <div class="icon">
+                      <img class="icon-img" src="https://img.icons8.com/?size=100&id=Pg7BzLNPKWlA&format=png&color=000000" alt="Icon">
+                  </div>
+                  <div class="text">
+                      <h3><a href="service-details.html">Pittsburgh, PA</a></h3>
+                      <p>102 River Blvd, Pittsburgh, PA 15212</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--====== End Service Section ======-->
+<!-- ##### Pricing Section Start ##### -->
+<section class="about-us-area wow fadeInUp" style = "margin-top: 4rem;
+  margin-bottom: 6rem;">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- About Us Thumbnail -->
+      <div class="col-12 col-lg-6 wow fadeInLeft">
+        <div class="about-us-thumbnail about-us-img">
+          <img src="{% static 'website/images/pricingpic.jpg' %}" alt="">
+        </div>
+      </div>
+
+      <!-- About Us Content -->
+      <div class="col-12 col-lg-6 wow fadeInRight">
+        <div class="about-us-content">
+          <!-- Section Heading -->
+          <div class="section-heading">
+            <p>OUR PRICING</p>
+            <h2><span>Fair & Transparent</span> Pricing</h2>
+          </div>
+          <p>At GreenWay Apiaries, we offer competitive prices that are often lower than those of honey packers because we produce all our goods directly from our own beehives. This helps reduce our bottom line while ensuring you receive high-quality, farm-fresh products. Our pricing reflects the love and care that goes into every jar of honey, beeswax candle, and more.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ##### Pricing Section End ##### -->
+
+<!-- ##### FAQ Area Start ##### -->
+<section class="famie-faq-area wow fadeInUp">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 wow fadeInDown">
+          <!-- Section Heading -->
+          <div class="section-heading text-center">
+            <p>HAVE A QUESTION?</p>
+            <h2><span>Get answers</span> to FAQs about our products</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 wow fadeInUp">
+          <div class="accordions accordion-margin" id="accordion" role="tablist" aria-multiselectable="true">
+
+            <!-- Single Accordion Area -->
+            <div class="panel single-accordion wow fadeInUp">
+              <h6><a role="button" class="" aria-expanded="true" aria-controls="collapseOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">What makes GreenWay Apiaries' honey different from others?
+                  <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
+                  <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
+                </a></h6>
+              <div id="collapseOne" class="accordion-content collapse show">
+                <p>We produce all of our honey and bee products directly from our own beehives, ensuring we know exactly what goes into each product. Unlike many competitors who source materials externally, we control the entire process, from hive to jar.</p>
+              </div>
+            </div>
+
+            <!-- Single Accordion Area -->
+            <div class="panel single-accordion wow fadeInDown">
+              <h6>
+                <a role="button" class="collapsed" aria-expanded="true" aria-controls="collapseTwo" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo">Where can I buy your products?
+                  <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
+                  <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
+                </a>
+              </h6>
+              <div id="collapseTwo" class="accordion-content collapse">
+                <p>Our products are available at a handful of retail locations in Northeast Pennsylvania, at farmers markets, and local events. We are also adding online sales soon, so you can order directly from our website and have it delivered to your doorstep.</p>
+              </div>
+            </div>
+
+            <!-- Single Accordion Area -->
+            <div class="panel single-accordion wow fadeInUp">
+              <h6>
+                <a role="button" aria-expanded="true" aria-controls="collapseThree" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseThree">What is propolis tincture, and how is it used?
+                  <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
+                  <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
+                </a>
+              </h6>
+              <div id="collapseThree" class="accordion-content collapse">
+                <p>Propolis is a resinous material collected by bees from trees and plants. It’s used in the hive for its antimicrobial properties. Our propolis tincture can be used for its potential health benefits, including supporting the immune system.</p>
+              </div>
+            </div>
+
+            <!-- Single Accordion Area -->
+            <div class="panel single-accordion wow fadeInDown">
+              <h6>
+                <a role="button" aria-expanded="true" aria-controls="collapseFour" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseFour">Are your bees local to Pennsylvania?
+                  <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
+                  <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
+                </a>
+              </h6>
+              <div id="collapseFour" class="accordion-content collapse">
+                <p>Yes, we breed Pennsylvania local stock of bees that are known for their gentle nature and resistance to varroa mites. These bees are uniquely suited to thrive in our local environment and help maintain healthy colonies.</p>
+              </div>
+            </div>
+
+            <!-- Single Accordion Area -->
+            <div class="panel single-accordion wow fadeInUp">
+              <h6>
+                <a role="button" aria-expanded="true" aria-controls="collapseFive" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseFive">Do You Use Any Additives in Your Honey?
+                  <span class="accor-open"><i class="arrow_carrot-up" aria-hidden="true"></i></span>
+                  <span class="accor-close"><i class="arrow_carrot-down" aria-hidden="true"></i></span>
+                </a>
+              </h6>
+              <div id="collapseFive" class="accordion-content collapse">
+                <p>No, all of our honey is 100% natural and raw, with no additives or preservatives. We believe in providing pure, farm-fresh honey straight from the hive to your table.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- ##### FAQ Area End ##### -->
+
+
+
+
+<section id="events" class="wow fadeInUp">
+  <div class="content-wrap bg-light content-wrap-mg" style="padding: 4rem;">
+    <div class="section-title text-center mb-50 wow fadeInDown">
+      <h2>Our Events</h2>
+    </div>
+    <div class="container">
+      <div class="row g-4 mb-5">
+
+<!-- Event Section: No Events Available -->
+<article class="entry event col-12 mb-0 wow fadeInUp">
+  <div class="grid-inner bg-white row g-0 p-3 border-0 shadow-sm h-shadow all-ts h-translate-y-sm">
+    <div class="col-md-4 mb-md-0">
+      <a href="#" class="entry-image mb-0 h-100">
+        <img src="{% static 'website/images/pricingpic.jpg' %}" alt="No Upcoming Events" class="rounded-2 h-100" style="object-fit: cover;">
+      </a>
+    </div>
+    <div class="col-md-8 p-4">
+      <div class="entry-meta no-separator mb-1 mt-0">
+        <ul>
+          <li><a href="#" class="text-uppercase fw-medium">No Upcoming Events</a></li>
+        </ul>
+      </div>
+      <div class="entry-title nott">
+        <h3><a href="#">Stay Tuned for Future Events</a></h3>
+      </div>
+      <div class="entry-content my-3">
+        <p class="mb-0">We currently do not have any events scheduled. Please check back later, as we host exciting bee farm open houses and demonstrations every month. When new events are posted, they will appear here.</p>
+      </div>
+      <div class="entry-meta no-separator">
+        <ul>
+          <li><a href="#" class="fw-normal"><i class="fa-solid fa-location-dot"></i> Location to be announced</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+        <!-- Event 2: Harvest Festival & Honey Tasting -->
+         <!--
+        
+        <article class="entry event col-md-6 col-lg-4 mb-0 wow fadeInUp">
+          <div class="grid-inner bg-white row g-0 p-3 border-0 shadow-sm h-shadow all-ts h-translate-y-sm">
+            <div class="col-12 p-4">
+              <div class="entry-meta no-separator mb-1 mt-0">
+                <ul>
+                  <li><a href="#" class="text-uppercase fw-medium">Fri, Sep 22 @ 11:00AM</a></li>
+                </ul>
+              </div>
+              <div class="entry-title nott">
+                <h3><a href="#">Harvest Festival & Honey Tasting</a></h3>
+              </div>
+              <div class="entry-content my-3">
+                <p class="mb-0">Celebrate the season with our Harvest Festival and taste fresh honey straight from the hive.</p>
+              </div>
+              <div class="entry-meta no-separator">
+                <ul>
+                  <li><a href="#" class="fw-normal"><i class="fa-solid fa-location-dot"></i> 456 Maple Grove, Scranton, PA 18503</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+        -->
+        <!-- Event 3: Beekeeping Workshop -->
+         <!--
+        
+        <article class="entry event col-md-6 col-lg-4 mb-0 wow fadeInUp">
+          <div class="grid-inner bg-white row g-0 p-3 border-0 shadow-sm h-shadow all-ts h-translate-y-sm">
+            <div class="col-12 p-4">
+              <div class="entry-meta no-separator mb-1 mt-0">
+                <ul>
+                  <li><a href="#" class="text-uppercase fw-medium">Fri, Oct 5 @ 9:00AM</a></li>
+                </ul>
+              </div>
+              <div class="entry-title nott">
+                <h3><a href="#">Beekeeping Workshop</a></h3>
+              </div>
+              <div class="entry-content my-3">
+                <p class="mb-0">Learn the art of beekeeping from the experts. Perfect for beginners interested in starting their own hive.</p>
+              </div>
+              <div class="entry-meta no-separator">
+                <ul>
+                  <li><a href="#" class="fw-normal"><i class="fa-solid fa-location-dot"></i> 789 Apiary Road, Harrisburg, PA 17101</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+-->
+        <!-- Event 4: Honey & Mead Pairing Evening -->
+
+        <!--
+        
+        <article class="entry event col-md-6 col-lg-4 mb-0 wow fadeInUp" style="margin-bottom:6rem">
+          <div class="grid-inner bg-white row g-0 p-3 border-0 shadow-sm h-shadow all-ts h-translate-y-sm">
+            <div class="col-12 p-4">
+              <div class="entry-meta no-separator mb-1 mt-0">
+                <ul>
+                  <li><a href="#" class="text-uppercase fw-medium">Fri, Oct 15 @ 7:00PM</a></li>
+                </ul>
+              </div>
+              <div class="entry-title nott">
+                <h3><a href="#">Honey & Mead Pairing Evening</a></h3>
+              </div>
+              <div class="entry-content my-3">
+                <p class="mb-0">Indulge in a curated experience pairing honey with artisan mead for a delightful evening.</p>
+              </div>
+              <div class="entry-meta no-separator">
+                <ul>
+                  <li><a href="#" class="fw-normal"><i class="fa-solid fa-location-dot"></i> 102 Riverfront Blvd, Pittsburgh, PA 15222</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+-->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--====== Start About Section (Extra Information) ======-->
+<section class="about-section p-r z-1 pt-170 pb-80">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="about-content-box content-box-gap mb-50">
+          <div class="section-title section-title-left wow fadeInUp mb-30">
+            <span class="sub-title">About GreenWay Apiaries</span>
+            <h2>Dedicated to Sustainable Beekeeping & Pure Honey Products</h2>
+          </div>
+          <p>Founded in 2012, GreenWay Apiaries has been at the forefront of sustainable beekeeping practices in Eastern and Northern Pennsylvania. We strive to provide farm-to-table honey and bee products, all while focusing on breeding local bee stock that can combat the varroa mite problem through genetic resistance.</p>
+          <div class="choose-item-list wow fadeInDown">
+            <div class="single-choose-item mb-30">
+              <div class="text">
+                <h5>100% Natural Honey Products</h5>
+                <p>Our honey, beeswax candles, propolis tincture, and skin creams are made from the raw materials we produce ourselves, ensuring complete quality control from start to finish.</p>
+              </div>
+            </div>
+            <div class="single-choose-item mb-30">
+              <div class="text">
+                <h5>Years of Beekeeping Expertise</h5>
+                <p>Owner Devon Paderewski has over a decade of experience, working with both commercial beekeeping operations and now focusing on local beekeeping and research in Pennsylvania. His work has been recognized by PennState and Purdue University for its innovation in bee genetics and sustainability.</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-button wow fadeInUp">
+            <a href="about.html" class="main-btn btn-yellow">Learn More About Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="about-four_image-box text-right p-r mb-50 wow fadeInRight">
+          <img src="{% static 'website/images/gallery6.jpeg' %}" class="about-img_one" alt="">
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--====== End About Section (Extra Information) ======-->
+{% if submitted %}
+    <center>
+        <h2>Thanks {{ message_name }}!</h2>
+        <p>We received your email and will respond shortly...</p>
+    </center>
+    <br><br>
+  
+   
+{% else %}
+<!-- ##### Contact Area Start ##### -->
+<section id ="contact"class="contact-area section-padding-100-0 contact-margin wow fadeInUp">
+  <div class="container">
+    <div class="row justify-content-between">
+
+      <!-- Contact Content -->
+      <div class="col-12 col-lg-5 wow fadeInLeft">
+        <div class="contact-content mb-100">
+          <!-- Section Heading -->
+          <div class="section-heading">
+            <p>Contact now</p>
+            <h2><span>Get In Touch - {{ message_name }}</span> With Us</h2>
+            <img src="img/core-img/decor.png" alt="">
+          </div>
+          <!-- Contact Form Area -->
+          <div class="contact-form-area">
+            <form action="{% url 'index' %}" method="post">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-lg-6">
+                  <input type="text" class="form-control" name="message-name" placeholder="Your Name">
+                </div>
+                <div class="col-lg-6">
+                  <input type="email" class="form-control" name="message-email" placeholder="Your Email">
+                </div>
+                
+                <div class="col-12">
+                  <textarea name="message" class="form-control" cols="30" rows="10" placeholder="Your Message"></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn famie-btn">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Maps -->
+      <div class="col-lg-6 wow fadeInRight">
+        <div class="contact-maps mb-100">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.1491157824935!2d-75.90805182355696!3d40.8246882307087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c5ba08d25e6cd1%3A0xb0b69930373b6c1c!2s112%20E%20Ruddle%20St%2C%20Coaldale%2C%20PA%2018218!5e0!3m2!1sen!2sus!4v1726885691317!5m2!1sen!2sus"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ##### Contact Area End ##### -->
+{% endif %}
+        
+        
+       
+        <!--====== Start Footer ======-->
+        <footer class="footer-default footer-white dark-black-bg">
+            <div class="container">
+                <div class="footer-top wow fadeInUp">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 footer-contact-item">
+                            <div class="contact-info d-flex justify-content-center">
+                                <div class="site-logo text-center">
+                                    <a href="index.html" class="brand-logo"><img src="{% static 'website/images/logo/image20.png' %}" alt="Footer Logo"></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-12 footer-contact-item">
+                            <div class="contact-info d-flex">
+                                <div class="icon">
+                                    <i class="flaticon-placeholder"></i>
+                                </div>
+                                <div class="text">
+                                    <h5>Email Us</h5>
+                                    <h6><a href="mailto:hotlineinfo@gmial.com">hotlineinfo@gmial.com</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="col-lg-12">
+                        <div class="copyright-text text-center">
+                            <p>&copy; 2024 Greenway Apiaries. All Rights Reserved</p>
+                            <a href="https://www.flaticon.com/free-icons/honey" title="honey icons">Honey icons created by Freepik - Flaticon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer><!--====== End Footer ======-->
+        <!--====== back-to-top ======-->
+        <a href="#" class="back-to-top" ><i class="far fa-angle-up"></i></a>
+        <!--For Modals-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0"></script>
+        <!--====== Jquery js ======-->
+        <script src="{% static 'website/vendor/jquery-3.6.0.min.js' %}"></script>
+        <!--====== Bootstrap js ======-->
+        <script src="{% static 'website/vendor/popper/popper.min.js' %}"></script>
+        <!--====== Bootstrap js ======-->
+        <script src="{% static 'website/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+        <!--====== Slick js ======-->
+        <script src="{% static 'website/vendor/slick/slick.min.js' %}"></script>
+        <!--====== Magnific js ======-->
+        <script src="{% static 'website/vendor/magnific-popup/dist/jquery.magnific-popup.min.js' %}"></script>
+        <!--====== Isotope js ======-->
+        <script src="{% static 'website/vendor/isotope.min.js' %}"></script>
+        <!--====== Imagesloaded js ======-->
+        <script src="{% static 'website/vendor/imagesloaded.min.js' %}"></script>
+        <!--====== Counterup js ======-->
+        <script src="{% static 'website/vendor/jquery.counterup.min.js' %}"></script>
+        <!--====== Waypoints js ======-->
+        <script src="{% static 'website/vendor/jquery.waypoints.js' %}"></script>
+        <!--====== Nice-select js ======-->
+        <script src="{% static 'website/vendor/nice-select/js/jquery.nice-select.min.js' %}"></script>
+        <!--====== jquery UI js ======-->
+        <script src="{% static 'website/vendor/jquery-ui/jquery-ui.min.js' %}"></script>
+        <!--====== donutty js ======-->
+        <script src="{% static 'website/vendor/donutty-jquery.min.js' %}"></script>
+        <!--====== WOW js ======-->
+        <script src="{% static 'website/vendor/wow.min.js' %}"></script>
+        <!--====== AjaxChimp Min JS ======-->
+        <script src="{% static 'website/vendor/contact-form/jquery.ajaxchimp.min.js' %}"></script>
+        <!--====== Form Validator Min JS ======-->
+        <script src="{% static 'website/vendor/contact-form/form-validator.min.js' %}"></script>
+        <!--====== Contact Form Min JS ======-->
+        <script src="{% static 'website/vendor/contact-form/contact-form-script.js' %}"></script>
+        <!--====== Main js ======-->
+        <script src="{% static 'website/js/theme.js' %}"></script>
+        <!--jarallax js -->
+        <script src="{% static 'website/js/jarallax.min.js' %}"></script>
+     
+      
+      </body>
+</html>
