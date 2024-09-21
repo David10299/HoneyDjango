@@ -37,6 +37,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <!--GOOGLE FONTS-->
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 
 
 
@@ -1260,7 +1262,7 @@ html {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background-image: url("/static/website/images/icon/HONEYCOMBICON.PNG");
+    background-image: url("{% static 'website/images/icon/HONEYCOMBICON.png' %}");
     background-size: cover;
     vertical-align: middle;
 }
@@ -1284,6 +1286,8 @@ html {
 }
 .news-overlay {
   background-image: url("{% static 'website/images/newsoverlay.jpg' %}");
+  background-attachment: fixed;
+  background-position: center;
 }
 .icon-img{
   max-width: 69%;
@@ -1307,6 +1311,28 @@ html {
         margin-top: -3rem;
     }
 }
+@media only screen and (max-width: 500px) {
+  .event-mobile {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.about-padding{
+  padding-top: 4rem;
+}
+@media (max-width: 991px) {
+  .contact-margin {
+    margin-top: -3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-margin {
+    margin-top: 0;
+  }
+}
 
 </style>
     </head>
@@ -1327,7 +1353,7 @@ html {
                     <div class="row align-items-center">
                         <div class="col-xl-4 d-xl-block d-lg-none">
                             <div class="site-branding d-lg-block d-none">
-                                <a href="index.html" class="brand-logo"><img src="{% static 'website/images/logo/image20.png' %}" alt="Site Logo"></a>
+                                <a href="#about" class="brand-logo"><img src="{% static 'website/images/logo/image20.png' %}" alt="Site Logo"></a>
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-12">
@@ -1346,7 +1372,7 @@ html {
                                     </div>
                                 </div>
                                 <div class="button text-md-right text-sm-center">
-                                    <a href="contact.html" class="main-btn btn-yellow">About us</a>
+                                    <a href="#about" class="main-btn btn-yellow">About us</a>
                                 </div>
                             </div>
                         </div>
@@ -1404,7 +1430,7 @@ html {
                       <div class="hero-content text-center wow fadeInUp">
                           <h1 data-animation="fadeInUp" data-delay=".5s">Welcome To Greenway Apiaries </h1>
                           <div class="hero-button wow fadeInDown" data-animation="fadeInDown" data-delay=".6s">
-                              <a href="about.html" class="main-btn btn-yellow">About Us</a>
+                              <a href="#about" class="main-btn btn-yellow">About Us</a>
                               
                           </div>
                       </div>
@@ -1846,7 +1872,7 @@ html {
 <!-- ##### PRODUCTS Start ##### -->
 <section id="products"class="services-area d-flex flex-wrap wow fadeInUp">
   <!-- Service Thumbnail -->
-  <div class="services-thumbnail bg-img jarallax" style=" background-position-x: -500px; background-image: url({% static 'website/images/service/gettykeeper.jpg' %});"></div>
+  <div class="services-thumbnail bg-img jarallax" style=" background-position-x: -500px; background-image: url({% static 'website/images/gettykeeper.jpg' %});"></div>
 
   <!-- Service Content -->
   <div class="services-content section-padding-100-50 px-5">
@@ -1871,7 +1897,7 @@ html {
           <div class="single-service-area mb-50">
             <!-- Service Title -->
             <div class="service-title mb-3 d-flex align-items-center">
-              <img src="img/core-img/s1.png" alt="">
+              
               <h5>Spring Honey</h5>
             </div>
             <p>Our light and delicate spring honey is harvested in July and is perfect for a mild, floral flavor.</p>
@@ -1883,7 +1909,7 @@ html {
           <div class="single-service-area mb-50">
             <!-- Service Title -->
             <div class="service-title mb-3 d-flex align-items-center">
-              <img src="img/core-img/s2.png" alt="">
+              
               <h5>Autumn Honey</h5>
             </div>
             <p>This darker, more robust honey is harvested in late summer or early autumn, ideal for those who love a stronger honey flavor.</p>
@@ -1895,7 +1921,7 @@ html {
           <div class="single-service-area mb-50">
             <!-- Service Title -->
             <div class="service-title mb-3 d-flex align-items-center">
-              <img src="img/core-img/s3.png" alt="">
+              
               <h5>100% Beeswax Candles</h5>
             </div>
             <p>Our pure beeswax candles are made from our hives, offering a natural and long-lasting burn.</p>
@@ -1907,7 +1933,7 @@ html {
           <div class="single-service-area mb-50">
             <!-- Service Title -->
             <div class="service-title mb-3 d-flex align-items-center">
-              <img src="img/core-img/s4.png" alt="">
+              
               <h5>Propolis Tincture</h5>
             </div>
             <p>Our propolis tincture is made from the resinous material collected by bees, known for its potential health benefits.</p>
@@ -1919,7 +1945,7 @@ html {
           <div class="single-service-area mb-50">
             <!-- Service Title -->
             <div class="service-title mb-3 d-flex align-items-center">
-              <img src="img/core-img/s5.png" alt="">
+              
               <h5>Hand and Skin Cream</h5>
             </div>
             <p>Our all-natural hand and skin cream is made from beeswax and other nourishing ingredients to keep your skin soft and hydrated.</p>
@@ -1931,7 +1957,7 @@ html {
           <div class="single-service-area mb-50">
             <!-- Service Title -->
             <div class="service-title mb-3 d-flex align-items-center">
-              <img src="img/core-img/s6.png" alt="">
+              
               <h5>Comb Honey (Coming 2025)</h5>
             </div>
             <p>Our comb honey, launching in 2025, is harvested directly from the hive and provides an entirely raw, natural honey experience.</p>
@@ -1947,101 +1973,102 @@ html {
 
         
         <!--====== LOCATION Section ======-->
-<section class="popular-service p-r z-1 pt-130">
-  <div class="container">
-      <div class="row justify-content-center">
-          <div class="col-xl-8 col-lg-10">
-              <div class="section-title text-center mb-50 wow fadeInDown">
-                  <h2>All of Our Retail Locations</h2>
+        <section class="popular-service p-r z-1 pt-130">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-xl-8 col-lg-10">
+                      <div class="section-title text-center mb-50 wow fadeInDown">
+                          <h2>All of Our Retail Locations</h2>
+                      </div>
+                  </div>
+              </div>
+              <div class="row align-items-center">
+                  <div class="col-lg-4">
+                      <div class="single-service-item mb-50 wow fadeInUp">
+                          <div class="icon">
+                              <img class="icon-img" src="https://img.icons8.com/?size=100&id=1M0WNfyF7SI6&format=png&color=000000" alt="Icon">
+                          </div>
+                          <div class="text">
+                              <h3><a href="https://maps.app.goo.gl/QTHNDLtyCgBuUoTYA">Naturally Yours</a></h3>
+                              <p>81 Broadway, Jim Thorpe, PA 18229</p>
+                          </div>
+                      </div>
+                      <div class="single-service-item mb-50 wow fadeInDown">
+                          <div class="icon">
+                              <img class="icon-img" src="https://img.icons8.com/?size=100&id=3MtamNHEJ78V&format=png&color=000000" alt="Icon">
+                          </div>
+                          <div class="text">
+                              <h3><a href="https://maps.app.goo.gl/pa2DbSRu9RA7kSRk9">Stonehedge Gardens</a></h3>
+                              <p>51 Dairy Road, Tamaqua, PA 18252</p>
+                          </div>
+                      </div>
+                      <div class="single-service-item mb-50 wow fadeInUp">
+                          <div class="icon">
+                              <img class="icon-img" src="https://img.icons8.com/?size=100&id=rje7re8ItHNW&format=png&color=000000" alt="Icon">
+                          </div>
+                          <div class="text">
+                              <h3><a href="https://maps.app.goo.gl/MrrRbkKsLJS34yGv6">QueenBee boutique</a></h3>
+                              <p>500 N. Centre St, Unit 101A, Pottsville, PA 17901</p>
+                          </div>
+                      </div>
+                      <div class="single-service-item mb-50 wow fadeInUp">
+                          <div class="icon">
+                              <img class="icon-img" src="https://img.icons8.com/?size=100&id=yRNeE4rWE2B4&format=png&color=000000" alt="Icon">
+                          </div>
+                          <div class="text">
+                              <h3><a href="https://maps.app.goo.gl/pJiyPHPkP44vdq7VA">Heckman Orchards</a></h3>
+                              <p>3009 Route 115, Effort, PA 18330</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4">
+                      <div class="img-holder mb-50 wow fadeInDown">
+                          <img src="{% static 'website/images/gallery13.jpeg' %}" alt="Service Image">
+                      </div>
+                  </div>
+                  <div class="col-lg-4">
+                      <div class="single-service-item mb-50 card-rtl wow fadeInDown">
+                          <div class="icon">
+                              <img class="icon-img" src="https://img.icons8.com/?size=100&id=C2pzzuvgRFA0&format=png&color=000000" alt="Icon">
+                          </div>
+                          <div class="text">
+                              <h3><a href="https://maps.app.goo.gl/3QwVu5GS2d8c1MEU7">Ritters Farm Market</a></h3>
+                              <p>991 Hamlin Hwy, Lake Ariel, PA 18436</p>
+                          </div>
+                      </div>
+                      <div class="single-service-item mb-50 card-rtl wow fadeInUp">
+                          <div class="icon">
+                              <img class="icon-img" src="https://img.icons8.com/?size=100&id=NHZvPIUC5CyM&format=png&color=000000" alt="Icon">
+                          </div>
+                          <div class="text">
+                              <h3><a href="https://maps.app.goo.gl/PLWR6kp8nMxA2qEZA">Greentown Agway</a></h3>
+                              <p>1586 Pa-507, Greentown, PA 18426</p>
+                          </div>
+                      </div>
+                      <div class="single-service-item mb-50 card-rtl wow fadeInDown">
+                          <div class="icon">
+                              <img class="icon-img" src="https://img.icons8.com/?size=100&id=cHXdrig6UnM4&format=png&color=000000" alt="Icon">
+                          </div>
+                          <div class="text">
+                              <h3><a href="https://maps.app.goo.gl/zgeZbf6MfwmAhqWn9">Country Junction</a></h3>
+                              <p>6565 Interchange Rd, Lehighton, PA 18235</p>
+                          </div>
+                      </div>
+                      <div class="single-service-item mb-50 card-rtl wow fadeInDown">
+                          <div class="icon">
+                              <img class="icon-img" src="https://img.icons8.com/?size=100&id=Pg7BzLNPKWlA&format=png&color=000000" alt="Icon">
+                          </div>
+                          <div class="text">
+                              <h3><a href="https://maps.app.goo.gl/4gdFbbbbwHpCHsBU8">Seltzers Nursery & Farmstand</a></h3>
+                              <p>115 Overlook Dr, Lehighton, PA 18235</p>
+                          </div>
+                      </div>
+                  </div>
               </div>
           </div>
-      </div>
-      <div class="row align-items-center">
-          <div class="col-lg-4">
-              <div class="single-service-item mb-50 wow fadeInUp">
-                  <div class="icon">
-                      <img class="icon-img"src="https://img.icons8.com/?size=100&id=1M0WNfyF7SI6&format=png&color=000000" alt="Icon">
-                  </div>
-                  <div class="text">
-                      <h3><a href="service-details.html">Jim Thorpe, PA</a></h3>
-                      <p>81 Broadway, Jim Thorpe, PA 18229</p>
-                  </div>
-              </div>
-              <div class="single-service-item mb-50 wow fadeInDown">
-                  <div class="icon">
-                      <img class="icon-img" src="https://img.icons8.com/?size=100&id=3MtamNHEJ78V&format=png&color=000000" alt="Icon">
-                  </div>
-                  <div class="text">
-                      <h3><a href="service-details.html">Scranton, PA</a></h3>
-                      <p>123 Main St, Scranton, PA 18503</p>
-                  </div>
-              </div>
-              <div class="single-service-item mb-50 wow fadeInUp">
-                  <div class="icon">
-                      <img class="icon-img" src="https://img.icons8.com/?size=100&id=rje7re8ItHNW&format=png&color=000000" alt="Icon">
-                  </div>
-                  <div class="text">
-                      <h3><a href="service-details.html">Allentown, PA</a></h3>
-                      <p>456 Maple Ave, Allentown, PA 18102</p>
-                  </div>
-              </div>
-              <div class="single-service-item mb-50 wow fadeInUp">
-                  <div class="icon">
-                      <img class="icon-img" src="https://img.icons8.com/?size=100&id=yRNeE4rWE2B4&format=png&color=000000" alt="Icon">
-                  </div>
-                  <div class="text">
-                      <h3><a href="service-details.html">Allentown, PA</a></h3>
-                      <p>456 Maple Ave, Allentown, PA 18102</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-lg-4">
-              <div class="img-holder mb-50 wow fadeInDown">
-                  <img src="{% static 'website/images/gallery13.jpeg' %}" alt="Service Image">
-              </div>
-          </div>
-          <div class="col-lg-4">
-              <div class="single-service-item mb-50 card-rtl wow fadeInDown">
-                  <div class="icon">
-                      <img class="icon-img" src="https://img.icons8.com/?size=100&id=C2pzzuvgRFA0&format=png&color=000000" alt="Icon">
-                  </div>
-                  <div class="text">
-                      <h3><a href="service-details.html">Philadelphia, PA</a></h3>
-                      <p>789 Walnut St, Philadelphia, PA 19107</p>
-                  </div>
-              </div>
-              <div class="single-service-item mb-50 card-rtl wow fadeInUp">
-                  <div class="icon">
-                      <img class="icon-img" src="https://img.icons8.com/?size=100&id=NHZvPIUC5CyM&format=png&color=000000" alt="Icon">
-                  </div>
-                  <div class="text">
-                      <h3><a href="service-details.html">Harrisburg, PA</a></h3>
-                      <p>101 Pine St, Harrisburg, PA 17101</p>
-                  </div>
-              </div>
-              <div class="single-service-item mb-50 card-rtl wow fadeInDown">
-                  <div class="icon">
-                      <img class="icon-img" src="https://img.icons8.com/?size=100&id=cHXdrig6UnM4&format=png&color=000000" alt="Icon">
-                  </div>
-                  <div class="text">
-                      <h3><a href="service-details.html">Pittsburgh, PA</a></h3>
-                      <p>102 River Blvd, Pittsburgh, PA 15212</p>
-                  </div>
-              </div>
-              <div class="single-service-item mb-50 card-rtl wow fadeInDown">
-                  <div class="icon">
-                      <img class="icon-img" src="https://img.icons8.com/?size=100&id=Pg7BzLNPKWlA&format=png&color=000000" alt="Icon">
-                  </div>
-                  <div class="text">
-                      <h3><a href="service-details.html">Pittsburgh, PA</a></h3>
-                      <p>102 River Blvd, Pittsburgh, PA 15212</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
-<!--====== End Service Section ======-->
+        </section>
+        
+<!--====== End LOCATION Section ======-->
 <!-- ##### Pricing Section Start ##### -->
 <section class="about-us-area wow fadeInUp" style = "margin-top: 4rem;
   margin-bottom: 6rem;">
@@ -2163,7 +2190,7 @@ html {
 
 
 <section id="events" class="wow fadeInUp">
-  <div class="content-wrap bg-light content-wrap-mg" style="padding: 4rem;">
+  <div class="content-wrap bg-light content-wrap-mg event-mobile" style="padding: 4rem;">
     <div class="section-title text-center mb-50 wow fadeInDown">
       <h2>Our Events</h2>
     </div>
@@ -2174,25 +2201,25 @@ html {
 <article class="entry event col-12 mb-0 wow fadeInUp">
   <div class="grid-inner bg-white row g-0 p-3 border-0 shadow-sm h-shadow all-ts h-translate-y-sm">
     <div class="col-md-4 mb-md-0">
-      <a href="#" class="entry-image mb-0 h-100">
+      <a href="#events" class="entry-image mb-0 h-100">
         <img src="{% static 'website/images/pricingpic.jpg' %}" alt="No Upcoming Events" class="rounded-2 h-100" style="object-fit: cover;">
       </a>
     </div>
     <div class="col-md-8 p-4">
       <div class="entry-meta no-separator mb-1 mt-0">
         <ul>
-          <li><a href="#" class="text-uppercase fw-medium">No Upcoming Events</a></li>
+          <li><a href="#events" class="text-uppercase fw-medium">No Upcoming Events</a></li>
         </ul>
       </div>
       <div class="entry-title nott">
-        <h3><a href="#">Stay Tuned for Future Events</a></h3>
+        <h3><a href="#events">Stay Tuned for Future Events</a></h3>
       </div>
       <div class="entry-content my-3">
         <p class="mb-0">We currently do not have any events scheduled. Please check back later, as we host exciting bee farm open houses and demonstrations every month. When new events are posted, they will appear here.</p>
       </div>
       <div class="entry-meta no-separator">
         <ul>
-          <li><a href="#" class="fw-normal"><i class="fa-solid fa-location-dot"></i> Location to be announced</a></li>
+          <li><a href="#events" class="fw-normal"><i class="fa-solid fa-location-dot"></i> Location to be announced</a></li>
         </ul>
       </div>
     </div>
@@ -2285,7 +2312,7 @@ html {
 </section>
 
 <!--====== Start About Section (Extra Information) ======-->
-<section class="about-section p-r z-1 pt-170 pb-80">
+<section class="about-section p-r z-1 about-padding pb-80">
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
@@ -2310,7 +2337,7 @@ html {
             </div>
           </div>
           <div class="about-button wow fadeInUp">
-            <a href="about.html" class="main-btn btn-yellow">Learn More About Us</a>
+            <a href="#about" class="main-btn btn-yellow">Learn More About Us</a>
           </div>
         </div>
       </div>
@@ -2396,7 +2423,7 @@ html {
                         <div class="col-lg-4 col-md-12 footer-contact-item">
                             <div class="contact-info d-flex justify-content-center">
                                 <div class="site-logo text-center">
-                                    <a href="index.html" class="brand-logo"><img src="{% static 'website/images/logo/image20.png' %}" alt="Footer Logo"></a>
+                                    <a href="#home" class="brand-logo"><img src="{% static 'website/images/logo/image20.png' %}" alt="Footer Logo"></a>
                                 </div>
                             </div>
                         </div>
@@ -2426,7 +2453,7 @@ html {
             </div>
         </footer><!--====== End Footer ======-->
         <!--====== back-to-top ======-->
-        <a href="#" class="back-to-top" ><i class="far fa-angle-up"></i></a>
+        <a href="#" class="back-to-top" ><i class="fas fa-arrow-up"></i></a>
         <!--For Modals-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0"></script>
         <!--====== Jquery js ======-->
