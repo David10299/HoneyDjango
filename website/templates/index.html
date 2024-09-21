@@ -313,13 +313,12 @@ html {
 .services-thumbnail {
   background-size: cover;
   background-attachment: fixed;
-  background-position: center center;
   background-image: url("{% static 'website/images/gettykeeper.jpg' %}");
 }
 
 @media only screen and (max-width: 768px) {
     .services-thumbnail {
-        background-attachment: scroll;
+        
         background-image: url("{% static 'website/images/gettykeeper.jpg' %}");
     }
 }
@@ -1887,7 +1886,7 @@ html {
 <!-- ##### PRODUCTS Start ##### -->
 <section id="products"class="services-area d-flex flex-wrap wow fadeInUp">
   <!-- Service Thumbnail -->
-  <div class="services-thumbnail bg-img jarallax" style=" background-position-x: -500px;"></div>
+  <div class="services-thumbnail bg-img jarallax" ></div>
 
   <!-- Service Content -->
   <div class="services-content section-padding-100-50 px-5">
