@@ -18,7 +18,7 @@ def index(request):
                 'Greenway support - ' + message_name,  # Subject
                 email_body,  # Updated message content
                 message_email,  # From email
-                ['lxdavidxl9166@gmail.com'],  # To email
+                ['greenwayapiaries@gmail.com'],  # To email
             )
         except BadHeaderError:
             return HttpResponse('Invalid header found.')
